@@ -66,10 +66,7 @@
     },
     "linkedin": {
       "href": "https://www.linkedin.com/in/marc-ib%C3%A0%C3%B1ez-0932502aa/",
-      "text": "linkedin.com/in/marc-ibàñez-0932502aa",
-      "todo": [
-        "LinkedIn: la URL personalizada usa «ibàñez» (con à). ¿La cambias en LinkedIn (p. ej. linkedin.com/in/marc-ibanez-dev) para que coincida con «Ibáñez»? Pásame la nueva URL."
-      ]
+      "text": "linkedin.com/in/marc-ibàñez-0932502aa"
     }
   },
   "projects": {
@@ -99,9 +96,13 @@
         "SQLite",
         "Docker"
       ],
-      "links": {},
+      "links": {
+        "code": [
+          "https://github.com/Marpuchy/disperson"
+        ]
+      },
       "todo": [
-        "Disperson: el repo github.com/Marpuchy/disperson es privado (da 404 desde fuera), así que no lo enlazo. ¿Lo haces público para enlazarlo? ¿Está desplegado en algún sitio (Render…)?"
+        "Disperson: disperson.vercel.app responde pero muestra el código PHP en crudo (despliegue roto), así que no lo enlazo como demo. Si lo despliegas bien (p. ej. Render, como dice el README), pásame la URL."
       ]
     },
     "pactumx": {
@@ -110,14 +111,11 @@
         "C#"
       ],
       "links": {
+        "demo": "https://chinwenwencha.itch.io/pactum-x",
         "code": [
           "https://github.com/Marpuchy/Pactum3D"
         ]
-      },
-      "todo": [
-        "PactumX: ¿cuántos erais en el equipo?",
-        "PactumX: ¿está publicado (itch.io u otro) o hay un repo del proyecto original? Pásame el enlace."
-      ]
+      }
     },
     "cellular": {
       "tech": [
@@ -153,10 +151,7 @@
         "Unity",
         "C#"
       ],
-      "links": {},
-      "todo": [
-        "Roguelike: no lo enlazo porque tu fork (github.com/Marpuchy/Roguelike) tiene un README de broma heredado. Si lo limpias, lo enlazo."
-      ]
+      "links": {}
     }
   },
   "i18n": {
@@ -236,7 +231,7 @@
           "name": "PactumX",
           "meta": "Curso de Especialización | Retrópolis Valencia 2025",
           "bullets": [
-            "Como jefe de programación, lideré el desarrollo en Unity de un roguelike 2D de fantasía oscura, presentado en Retrópolis Valencia (ETSINF, UPV) en representación del IES El Caminàs.",
+            "Como jefe de programación en un equipo de 4, lideré el desarrollo en Unity de un roguelike 2D de fantasía oscura, presentado en Retrópolis Valencia (ETSINF, UPV) en representación del IES El Caminàs.",
             "Mecánica central: pactos que dan poder a cambio de penalizaciones permanentes, con generación procedural de salas.",
             "Por mi cuenta, empecé a adaptar el proyecto de 2D a 2,5D (Pactum3D)."
           ]
