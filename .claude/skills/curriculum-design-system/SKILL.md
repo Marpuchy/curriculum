@@ -43,8 +43,8 @@ No hay modo oscuro del sistema (un CV se diseña para papel). Hay tres contextos
 | Texto blanco sobre botón `--accent` | 5,72 | 4,5 ✔ |
 | `--border-control` sobre `#fff` | 3,49 | 3 ✔ |
 | Borde de control blanco 40 % sobre lateral | 3,43 | 3 ✔ |
-| `#f6fbff` sobre lateral (arriba / abajo) | 12,7 / 14,2 | 4,5 ✔ |
-| `#f6fbff` al 78 % (títulos del lateral) | 8,3 | 4,5 ✔ |
+| `#f6fbff` sobre lateral (arriba con brillo / abajo) | 11,3 / 14,2 | 4,5 ✔ |
+| `#f6fbff` al 78 % (títulos del lateral) | 7,5 / 9,1 | 4,5 ✔ |
 | `#f6fbff` al 84 % sobre grupo de competencias | 8,4 | 4,5 ✔ |
 | Foco `#8cc8f5` sobre lateral | 7,4 | 3 ✔ |
 | Impresión: `--ink-muted` sobre `#f3f6f9` | 4,95 | 4,5 ✔ |
@@ -67,11 +67,11 @@ Escala de 4 px: **4 · 8 · 12 · 16 · 24 · 32 · 48**.
 | 32 | Padding del contenido principal en escritorio |
 | 48 | Solo margen exterior de la página en pantallas grandes |
 
-En impresión se usa la misma escala reducida a la mitad cuando haga falta para caber en una página (2 · 4 · 6 · 8 · 12 · 16), nunca valores sueltos.
+En impresión los espaciados van en mm. Valores en uso: 0,5 · 0,8 · 1 · 1,5 · 2 · 2,5 · 3,5 · 4 · 5 · 6 · 12 (margen). Son finos a propósito para que cada versión quepa en una página. No añadir otros sin necesidad: si falta sitio, reducir primero `.section { margin-top }`.
 
 ## 4. Tipografía
 
-IBM Plex Sans (texto) e IBM Plex Serif 600 (solo el nombre), **estáticas y alojadas en `fonts/`** con `@font-face`. Nunca fuentes variables ni Google Fonts: Chrome las incrusta como Type 3 en el PDF. Base pantalla: `html { font-size: 14px }`; impresión: `8.6pt`.
+IBM Plex Sans (texto) e IBM Plex Serif 600 (solo el nombre), **estáticas y alojadas en `fonts/`** con `@font-face`. Nunca fuentes variables ni Google Fonts: Chrome las incrusta como Type 3 en el PDF. Base pantalla: `html { font-size: 14px }` (también en móvil, para no bajar de 12 px); impresión: `8.4pt`.
 
 | Rol | Pantalla | Impresión | Peso | Uso |
 |---|---|---|---|---|
@@ -79,11 +79,11 @@ IBM Plex Sans (texto) e IBM Plex Serif 600 (solo el nombre), **estáticas y aloj
 | `h1` | 16–17 px | 11–12 pt | 600 | Puesto bajo el nombre |
 | `h2` | 14 px, mayúsculas, tracking 0.1em | 9,5–10 pt | 700 | Títulos de sección |
 | `h3` | 14–15 px | 9,5–10 pt | 700 | Empresa / proyecto / centro |
-| `body` | 14 px, line-height 1.5 | 8,5–9 pt, line-height 1.35 | 400 | Párrafos |
-| `small` | 13 px | 8 pt | 400 | Fechas, tipo de proyecto, enlaces |
+| `body` | 14 px, line-height 1.5 | 8,4–8,8 pt, line-height 1.3 | 400 | Párrafos, viñetas |
+| `small` | 13 px | 7,6–8,2 pt | 400 | Fechas, tecnologías, enlaces, contacto |
 | `label` | 12 px | 7,5–8 pt | 600 | Chips de tecnologías |
 
-- **Mínimo 12 px en pantalla y 7,5 pt en impresión.**
+- **Mínimo 12 px en pantalla y 7,5 pt en impresión.** El contacto del PDF va a 7,6 pt para que la URL de LinkedIn quepa en una línea.
 - **Máximo 3 pesos:** 400, 600, 700 (quitar 500 de la carga de fuentes).
 - Fechas y teléfonos con `font-variant-numeric: tabular-nums`.
 - Tracking de mayúsculas ≤ 0.12em.
@@ -92,6 +92,7 @@ IBM Plex Sans (texto) e IBM Plex Serif 600 (solo el nombre), **estáticas y aloj
 
 - Librería única: **lucide**, como **SVG en línea** (sin CDN: el PDF y el ATS no dependen de recursos externos). Trazo 2 (1.75 en impresión), `stroke="currentColor"`.
 - Tamaños: 16 px (contacto, enlaces), 20 px (cabeceras si hiciera falta), 24 px (no se usa por ahora).
+- En impresión, el contacto va **sin iconos** para ganar ancho (las URL no deben partirse).
 - Los iconos son **decorativos**: `aria-hidden="true"` y siempre acompañados del texto completo (el email, el teléfono, la URL). Nunca un icono sustituye a un dato.
 - **Nada de emoji** en el CV. Los PNG actuales (`img_1..5.png`) se sustituirán por SVG de lucide.
 
@@ -105,7 +106,6 @@ IBM Plex Sans (texto) e IBM Plex Serif 600 (solo el nombre), **estáticas y aloj
 | Demo / web publicada | `external-link` |
 | Carnet de conducir / vehículo | `car` |
 | Disponibilidad horaria | `clock` |
-| Idiomas | `languages` |
 
 ## 6. Interacción y accesibilidad
 
@@ -123,7 +123,7 @@ Probar a **1440 / 820 / 390 px** y en **impresión A4**.
 
 - **1440:** dos columnas (contenido + lateral de ~300 px), hoja centrada con sombra.
 - **820:** una columna, el lateral pasa debajo del contenido. Nada de anchos fijos que obliguen a hacer scroll horizontal.
-- **390:** gutter de 16 px, cabeceras de tarjeta apiladas (título y fecha en dos líneas), selector de idioma debajo del eyebrow.
+- **390:** gutter de 16 px, cabeceras de tarjeta apiladas (título y fecha en dos líneas), selector de versión (web / videojuegos) debajo del eyebrow.
 - **Impresión (A4):**
   - `@page { size: A4; margin: 0 }` con el margen de 12 mm como `padding` del `body` (así no se imprimen encabezados ni pies del navegador), y todo el CV en **una página**.
   - Rangos de fechas con raya «–», no guion: `pdftotext` borra el guion de final de línea.
@@ -131,7 +131,8 @@ Probar a **1440 / 820 / 390 px** y en **impresión A4**.
   - **Se mantienen las dos columnas** (no aplicar las media queries de móvil al imprimir).
   - Lateral con **fondo claro** en impresión (texto `--ink` sobre blanco o `#f3f6f9`), sin sombras ni degradados.
   - `break-inside: avoid` en tarjetas y grupos.
-  - Ocultar el selector de idioma y cualquier control.
+  - Ocultar el selector de versión, el eyebrow y cualquier control.
+  - URL visibles con `.nobr` (solo en impresión): `pdftotext` borra el guion de final de línea y la URL llega rota al ATS.
   - Ningún texto dentro de imágenes; la foto es la única imagen de contenido.
 
 ## 8. Checklist

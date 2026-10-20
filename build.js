@@ -32,9 +32,9 @@ const indent = (html, n) => html.split('\n').map((l) => (l ? ' '.repeat(n) + l :
 
 function linksLine(links, t) {
   const parts = [];
-  if (links.demo) parts.push(`<span class="link-label">${esc(t.labels.demo)}</span> <a href="${esc(links.demo)}">${urlHtml(shortUrl(links.demo))}</a>`);
+  if (links.demo) parts.push(`<span class="link-label">${esc(t.labels.demo)}</span> <a href="${esc(links.demo)}" target="_blank" rel="noreferrer">${urlHtml(shortUrl(links.demo))}</a>`);
   if (links.code && links.code.length) {
-    const code = links.code.map((u) => `<a href="${esc(u)}">${urlHtml(shortUrl(u))}</a>`).join(', ');
+    const code = links.code.map((u) => `<a href="${esc(u)}" target="_blank" rel="noreferrer">${urlHtml(shortUrl(u))}</a>`).join(', ');
     parts.push(`<span class="link-label">${esc(t.labels.code)}</span> ${code}`);
   }
   return parts.length ? `<p class="links-line">${parts.join(' <span class="sep" aria-hidden="true">·</span> ')}</p>` : '';
@@ -114,8 +114,8 @@ function renderPage(versionId, lang) {
     `<li class="contact-item">${icon('mail')}<a href="mailto:${esc(p.email)}">${esc(p.email)}</a></li>`,
     `<li class="contact-item">${icon('phone')}<a href="${esc(p.phone.href)}">${esc(p.phone.text)}</a></li>`,
     `<li class="contact-item">${icon('mapPin')}<span>${esc(t.labels.location)}</span></li>`,
-    `<li class="contact-item">${icon('github')}<a href="${esc(p.github.href)}">${urlHtml(p.github.text, true)}</a></li>`,
-    `<li class="contact-item">${icon('linkedin')}<a href="${esc(p.linkedin.href)}">${urlHtml(p.linkedin.text, true)}</a></li>`,
+    `<li class="contact-item">${icon('github')}<a href="${esc(p.github.href)}" target="_blank" rel="noreferrer">${urlHtml(p.github.text, true)}</a></li>`,
+    `<li class="contact-item">${icon('linkedin')}<a href="${esc(p.linkedin.href)}" target="_blank" rel="noreferrer">${urlHtml(p.linkedin.text, true)}</a></li>`,
   ].join('\n');
 
   const html = `<!DOCTYPE html>
