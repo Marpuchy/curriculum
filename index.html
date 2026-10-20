@@ -3,100 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Currículum de Marc Ibáñez, desarrollador de software junior.">
-    <title>Currículum | Marc Ibáñez</title>
+    <meta name="description" content="Currículum de Marc Ibáñez, desarrollador web junior (TypeScript, Next.js, React, Symfony, PHP).">
+    <title>Currículum | Marc Ibáñez – Desarrollador web junior</title>
     <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-<!-- El orden del DOM es el orden de lectura del PDF (ATS): nombre, título, perfil, experiencia,
-     proyectos | competencias, formación, idiomas, información adicional, contacto. -->
+<!-- Generado por build.js a partir de data/cv.json: no editar a mano.
+     El orden del DOM es el orden de lectura del PDF (ATS). -->
 <main class="resume">
     <div class="content">
         <header class="hero">
             <div class="hero-top">
-                <p class="eyebrow" data-i18n="hero.eyebrow">Currículum Vitae</p>
-
-                <div class="language-switcher" role="group" aria-label="Idioma / Language">
-                    <button type="button" class="language-button" data-lang="es">ES</button>
-                    <button type="button" class="language-button" data-lang="en">EN</button>
-                </div>
+                <p class="eyebrow">Currículum Vitae</p>
+                <nav class="version-switcher" aria-label="Versión del currículum">
+                    <a class="version-link" href="." aria-current="page">Desarrollo web</a>
+                    <a class="version-link" href="videojuegos/">Videojuegos</a>
+                </nav>
             </div>
 
             <h1>Marc Ibáñez</h1>
-            <p class="role" data-i18n="hero.title">Desarrollador de Software Junior | Frontend &amp; Backend</p>
-            <p class="summary" data-i18n="hero.summary">
-                Desarrollador de software junior con formación en Desarrollo de Aplicaciones Web en IES El Caminàs y
-                actualmente cursando una especialización en Desarrollo de Videojuegos. He desarrollado proyectos
-                personales de aplicaciones web y software, y realicé prácticas FCT en NTT DATA, donde tuve mi primera
-                experiencia en entorno corporativo. Busco incorporarme a un equipo donde seguir creciendo en frontend,
-                backend o desarrollo general, aportando capacidad de adaptación, aprendizaje continuo y compromiso.
-            </p>
+            <p class="role">Desarrollador Web Junior | Frontend &amp; Backend</p>
+            <p class="summary">Desarrollador web junior formado en el CFGS de Desarrollo de Aplicaciones Web y estudiante del Grado en Ingeniería Informática en la Universitat Jaume I (UJI). He desarrollado aplicaciones full-stack con Next.js, React, TypeScript y Supabase, y con Symfony y PHP, y realicé las prácticas FCT en NTT DATA. Busco un puesto junior o prácticas en desarrollo web para seguir creciendo en frontend y backend. Disponible por las tardes, a partir de las 15:00 (media jornada o prácticas), compatible con mis estudios de Ingeniería Informática.</p>
+            <p class="spoken-languages"><strong>Idiomas:</strong> Español (nativo) · Valenciano (nativo) · Inglés (B2)</p>
         </header>
 
         <section class="section">
-            <h2 class="section-title" data-i18n="sections.experience">Experiencia</h2>
+            <h2 class="section-title">Experiencia</h2>
 
             <article class="entry">
                 <div class="entry-head">
                     <h3>NTT DATA</h3>
-                    <span class="entry-meta" data-i18n="experience.ntt.period">Prácticas FCT | Marzo 2025 – Mayo 2025</span>
+                    <span class="entry-meta">Prácticas FCT | Marzo – Mayo 2025</span>
                 </div>
-                <p data-i18n="experience.ntt.description">
-                    Primera experiencia en un entorno profesional corporativo, con adaptación a dinámicas reales de
-                    trabajo en consultoría tecnológica. Durante este periodo tuve contacto con Kotlin Multiplatform y
-                    Jetpack Compose desde una base de aprendizaje, ampliando mi visión sobre nuevas herramientas y
-                    entornos de desarrollo.
-                </p>
+                <ul class="bullets">
+                    <li>Desarrollé pantallas de interfaz de usuario con Kotlin Multiplatform y Jetpack Compose.</li>
+                    <li>Trabajé en un equipo con metodología Scrum dentro de un entorno de consultoría tecnológica.</li>
+                </ul>
             </article>
+
+            <p class="entry-compact"><strong>Dependiente en Churrería FM (Oropesa)</strong> <span class="entry-meta">| Verano 2026</span> — Atención al público y trabajo en equipo en un servicio de ritmo alto.</p>
         </section>
 
         <section class="section">
-            <h2 class="section-title" data-i18n="sections.projects">Proyectos</h2>
-
-            <article class="entry">
-                <div class="entry-head">
-                    <h3>Disperson</h3>
-                    <span class="entry-meta" data-i18n="projects.disperson.type">Proyecto de aplicación web</span>
-                </div>
-                <p data-i18n="projects.disperson.description1">
-                    Aplicación web relacionada con tests de personalidad, con almacenamiento de datos de usuario y
-                    visualización de perfiles interpretativos.
-                </p>
-                <p data-i18n="projects.disperson.description2">
-                    Trabajo centrado en lógica backend, gestión de datos y estructuración de la aplicación.
-                </p>
-                <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> PHP, Symfony, Doctrine, Twig, Bootstrap, SQLite</p>
-            </article>
+            <h2 class="section-title">Proyectos</h2>
 
             <article class="entry">
                 <div class="entry-head">
                     <h3>DND Manager</h3>
-                    <span class="entry-meta" data-i18n="projects.dndManager.type">Aplicación web</span>
+                    <span class="entry-meta">Aplicación web full-stack | 2025 – Actualidad</span>
                 </div>
-                <p data-i18n="projects.dndManager.description1">
-                    Aplicación web para la gestión de campañas y personajes.
-                </p>
-                <p data-i18n="projects.dndManager.description2">
-                    Trabajo enfocado en la estructura de la interfaz, componentes reutilizables, manejo de datos y
-                    experiencia de usuario.
-                </p>
-                <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> Next.js, TypeScript, JavaScript, CSS, Supabase</p>
+                <ul class="bullets">
+                    <li>Desarrollé una aplicación full-stack para gestionar campañas y personajes de D&amp;D 5e, desplegada en Vercel.</li>
+                    <li>Implementé la creación guiada de personajes, la gestión de campañas con roles (máster y jugador) y un compendio de contenido SRD (conjuros, objetos, criaturas, reglas).</li>
+                    <li>Diseñé el modelo de datos en Supabase (usuarios, campañas, sesiones, personajes y compendio) y añadí localización español/inglés.</li>
+                </ul>
+                <p class="tech-line"><span class="tech-label">Tecnologías:</span> Next.js, React, TypeScript, Tailwind CSS, Supabase (PostgreSQL)</p>
+                <p class="links-line"><span class="link-label">Demo:</span> <a href="https://dnd-manager-beta.vercel.app"><span class="nobr">dnd-manager-beta.vercel.app</span></a> <span class="sep" aria-hidden="true">·</span> <span class="link-label">Código:</span> <a href="https://github.com/Marpuchy/dnd-manager"><span class="nobr">github.com/Marpuchy/dnd-manager</span></a></p>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Disperson</h3>
+                    <span class="entry-meta">Proyecto final del CFGS DAW | 2025</span>
+                </div>
+                <ul class="bullets">
+                    <li>Desarrollé en solitario una aplicación Symfony de test de personalidad Big Five (OCEAN) con registro de usuarios, resultados guardados y un perfil visual con personajes asociados.</li>
+                    <li>Implementé el cálculo y la persistencia de las puntuaciones con Doctrine, un panel de administración con EasyAdmin para preguntas y personajes, tests de los servicios y el despliegue con Docker.</li>
+                </ul>
+                <p class="tech-line"><span class="tech-label">Tecnologías:</span> PHP, Symfony, Doctrine, Twig, EasyAdmin, Bootstrap, SQLite, Docker</p>
             </article>
 
             <article class="entry">
                 <div class="entry-head">
                     <h3>PactumX</h3>
-                    <span class="entry-meta" data-i18n="projects.pactumx.type">Proyecto personal</span>
+                    <span class="entry-meta">Curso de Especialización | Retrópolis Valencia 2025</span>
                 </div>
-                <p data-i18n="projects.pactumx.description1">
-                    Proyecto personal centrado en programación de sistemas, lógica y arquitectura de código.
-                </p>
-                <p data-i18n="projects.pactumx.description2">
-                    Trabajo orientado a la organización técnica del proyecto y la estructuración del software.
-                </p>
-                <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> Unity, C#</p>
+                <ul class="bullets">
+                    <li>Como jefe de programación, lideré el desarrollo en Unity de un roguelike 2D de fantasía oscura, presentado en Retrópolis Valencia (ETSINF, UPV) en representación del IES El Caminàs.</li>
+                    <li>Mecánica central: pactos que dan poder a cambio de penalizaciones permanentes, con generación procedural de salas.</li>
+                    <li>Por mi cuenta, empecé a adaptar el proyecto de 2D a 2,5D (Pactum3D).</li>
+                </ul>
+                <p class="tech-line"><span class="tech-label">Tecnologías:</span> Unity, C#</p>
+                <p class="links-line"><span class="link-label">Código:</span> <a href="https://github.com/Marpuchy/Pactum3D"><span class="nobr">github.com/Marpuchy/Pactum3D</span></a></p>
             </article>
         </section>
     </div>
@@ -105,88 +94,65 @@
         <img src="img.png" alt="Foto de perfil de Marc Ibáñez" class="profile-picture">
 
         <section class="panel">
-            <h2 class="panel-title" data-i18n="sections.skills">Competencias Técnicas</h2>
-
+            <h2 class="panel-title">Competencias técnicas</h2>
             <div class="skill-group">
-                <h3 data-i18n="skills.frontend.title">Frontend</h3>
-                <p data-i18n="skills.frontend.items">HTML5, CSS3, JavaScript, jQuery, diseño responsive</p>
+                <h3>Lenguajes</h3>
+                <p>TypeScript, JavaScript, PHP, Java, Kotlin, SQL</p>
             </div>
-
             <div class="skill-group">
-                <h3 data-i18n="skills.backend.title">Backend y Bases de Datos</h3>
-                <p data-i18n="skills.backend.items">Java, PHP, SQL, MySQL</p>
+                <h3>Frontend</h3>
+                <p>React, Next.js, HTML, CSS</p>
             </div>
-
             <div class="skill-group">
-                <h3 data-i18n="skills.tools.title">Herramientas</h3>
-                <p data-i18n="skills.tools.items">Git, GitHub, Bootstrap</p>
+                <h3>Backend y bases de datos</h3>
+                <p>Symfony, Supabase, MySQL, SQLite</p>
             </div>
-
             <div class="skill-group">
-                <h3 data-i18n="skills.other.title">Otros conocimientos</h3>
-                <p data-i18n="skills.other.items">C#, XML/RSS, maquetación web y documentación técnica</p>
+                <h3>Herramientas</h3>
+                <p>Git, GitHub</p>
+            </div>
+            <div class="skill-group">
+                <h3>Videojuegos</h3>
+                <p>Unity, C#, generación procedural, WebXR</p>
             </div>
         </section>
 
         <section class="panel">
-            <h2 class="panel-title" data-i18n="sections.education">Formación</h2>
-
+            <h2 class="panel-title">Formación</h2>
             <div class="study">
-                <h3 data-i18n="education.daw">CFGS Desarrollo de Aplicaciones Web (DAW) | 2023 – 2025</h3>
-                <p>IES El Caminàs</p>
+                <h3>Grado en Ingeniería Informática</h3>
+                <p>Universitat Jaume I (UJI) | <span class="dates">2026 – Actualidad</span></p>
             </div>
-
             <div class="study">
-                <h3 data-i18n="education.specialization">Curso de Especialización en Desarrollo de Videojuegos | 2025 – Actualidad</h3>
-                <p>IES El Caminàs</p>
+                <h3>Curso de Especialización en Desarrollo de Videojuegos</h3>
+                <p>IES El Caminàs | <span class="dates">2025 – 2026</span></p>
             </div>
-
             <div class="study">
-                <h3 data-i18n="education.bachillerato">Bachillerato Científico-Técnico | 2021 – 2023</h3>
-                <p>IES Vall d'Alba</p>
+                <h3>CFGS Desarrollo de Aplicaciones Web (DAW)</h3>
+                <p>IES El Caminàs | <span class="dates">2023 – 2025</span></p>
+            </div>
+            <div class="study">
+                <h3>Bachillerato Científico-Técnico</h3>
+                <p>IES Vall d'Alba | <span class="dates">2021 – 2023</span></p>
             </div>
         </section>
 
         <section class="panel">
-            <h2 class="panel-title" data-i18n="sections.languages">Idiomas</h2>
+            <h2 class="panel-title">Información adicional</h2>
             <ul class="info-list">
-                <li data-i18n="languages.spanish">Español: nativo</li>
-                <li data-i18n="languages.english">Inglés: C1 Cambridge</li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg><span>Carnet de conducir y vehículo propio.</span></li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Disponible por las tardes, desde las 15:00 (media jornada o prácticas).</span></li>
             </ul>
         </section>
 
         <section class="panel">
-            <h2 class="panel-title" data-i18n="sections.additional">Información Adicional</h2>
-            <ul class="info-list">
-                <li data-i18n="additional.license">Permiso de conducir y vehículo propio</li>
-                <li data-i18n="additional.interest">Interés en posiciones junior de frontend, backend o desarrollo de software general</li>
-                <li data-i18n="additional.profile">Perfil adaptable, orientado al aprendizaje continuo y al trabajo en equipo</li>
-            </ul>
-        </section>
-
-        <section class="panel">
-            <h2 class="panel-title" data-i18n="sections.contact">Contacto</h2>
+            <h2 class="panel-title">Contacto</h2>
             <ul class="info-list contact-list">
-                <li class="contact-item">
-                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <a href="mailto:mibanezp0709@gmail.com">mibanezp0709@gmail.com</a>
-                </li>
-                <li class="contact-item">
-                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <a href="tel:+34642677565">+34 642 677 565</a>
-                </li>
-                <li class="contact-item">
-                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Vall d'Alba, Castellón</span>
-                </li>
-                <li class="contact-item">
-                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                    <a href="https://github.com/Marpuchy" target="_blank" rel="noreferrer">github.com/Marpuchy</a>
-                </li>
-                <li class="contact-item">
-                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                    <a href="https://www.linkedin.com/in/marc-ib%C3%A0%C3%B1ez-0932502aa/" target="_blank" rel="noreferrer">linkedin.com/in/marc-ibáñez</a>
-                </li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:mibanezp0709@gmail.com">mibanezp0709@gmail.com</a></li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+34642677565">+34 642 677 565</a></li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Vall d'Alba, Castellón</span></li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg><a href="https://github.com/Marpuchy"><span class="nobr">github.com/</span><wbr><span class="nobr">Marpuchy</span></a></li>
+                <li class="contact-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg><a href="https://www.linkedin.com/in/marc-ib%C3%A0%C3%B1ez-0932502aa/"><span class="nobr">linkedin.com/</span><wbr><span class="nobr">in/</span><wbr><span class="nobr">marc-ibàñez-0932502aa</span></a></li>
             </ul>
         </section>
     </aside>
