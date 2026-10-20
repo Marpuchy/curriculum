@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Currículum de Marc Ibáñez, desarrollador de software junior.">
     <title>Currículum | Marc Ibáñez</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
+<!-- El orden del DOM es el orden de lectura del PDF (ATS): nombre, título, perfil, experiencia,
+     proyectos | competencias, formación, idiomas, información adicional, contacto. -->
 <main class="resume">
-    <section class="content">
+    <div class="content">
         <header class="hero">
             <div class="hero-top">
                 <p class="eyebrow" data-i18n="hero.eyebrow">Currículum Vitae</p>
 
-                <div class="language-switcher" aria-label="Language switcher">
+                <div class="language-switcher" role="group" aria-label="Idioma / Language">
                     <button type="button" class="language-button" data-lang="es">ES</button>
                     <button type="button" class="language-button" data-lang="en">EN</button>
                 </div>
             </div>
 
             <h1>Marc Ibáñez</h1>
-            <h2 data-i18n="hero.title">Desarrollador de Software Junior | Frontend &amp; Backend</h2>
+            <p class="role" data-i18n="hero.title">Desarrollador de Software Junior | Frontend &amp; Backend</p>
             <p class="summary" data-i18n="hero.summary">
                 Desarrollador de software junior con formación en Desarrollo de Aplicaciones Web en IES El Caminàs y
                 actualmente cursando una especialización en Desarrollo de Videojuegos. He desarrollado proyectos
@@ -36,14 +36,12 @@
         </header>
 
         <section class="section">
-            <div class="section-heading">
-                <h3 data-i18n="sections.experience">Experiencia</h3>
-            </div>
+            <h2 class="section-title" data-i18n="sections.experience">Experiencia</h2>
 
             <article class="entry">
                 <div class="entry-head">
-                    <h4>NTT DATA</h4>
-                    <span data-i18n="experience.ntt.period">Prácticas FCT | Marzo 2025 - Mayo 2025</span>
+                    <h3>NTT DATA</h3>
+                    <span class="entry-meta" data-i18n="experience.ntt.period">Prácticas FCT | Marzo 2025 – Mayo 2025</span>
                 </div>
                 <p data-i18n="experience.ntt.description">
                     Primera experiencia en un entorno profesional corporativo, con adaptación a dinámicas reales de
@@ -55,14 +53,12 @@
         </section>
 
         <section class="section">
-            <div class="section-heading">
-                <h3 data-i18n="sections.projects">Proyectos</h3>
-            </div>
+            <h2 class="section-title" data-i18n="sections.projects">Proyectos</h2>
 
             <article class="entry">
                 <div class="entry-head">
-                    <h4>Disperson</h4>
-                    <span data-i18n="projects.disperson.type">Proyecto de aplicación web</span>
+                    <h3>Disperson</h3>
+                    <span class="entry-meta" data-i18n="projects.disperson.type">Proyecto de aplicación web</span>
                 </div>
                 <p data-i18n="projects.disperson.description1">
                     Aplicación web relacionada con tests de personalidad, con almacenamiento de datos de usuario y
@@ -76,8 +72,8 @@
 
             <article class="entry">
                 <div class="entry-head">
-                    <h4>DND Manager</h4>
-                    <span data-i18n="projects.dndManager.type">Aplicación web</span>
+                    <h3>DND Manager</h3>
+                    <span class="entry-meta" data-i18n="projects.dndManager.type">Aplicación web</span>
                 </div>
                 <p data-i18n="projects.dndManager.description1">
                     Aplicación web para la gestión de campañas y personajes.
@@ -91,8 +87,8 @@
 
             <article class="entry">
                 <div class="entry-head">
-                    <h4>PactumX</h4>
-                    <span data-i18n="projects.pactumx.type">Proyecto personal</span>
+                    <h3>PactumX</h3>
+                    <span class="entry-meta" data-i18n="projects.pactumx.type">Proyecto personal</span>
                 </div>
                 <p data-i18n="projects.pactumx.description1">
                     Proyecto personal centrado en programación de sistemas, lógica y arquitectura de código.
@@ -103,73 +99,65 @@
                 <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> Unity, C#</p>
             </article>
         </section>
-
-        <section class="section">
-            <div class="section-heading">
-                <h3 data-i18n="sections.education">Formación</h3>
-            </div>
-
-            <article class="entry">
-                <div class="entry-head">
-                    <h4>IES El Caminàs</h4>
-                    <span data-i18n="education.daw">CFGS Desarrollo de Aplicaciones Web (DAW) | 2023 - 2025</span>
-                </div>
-            </article>
-
-            <article class="entry">
-                <div class="entry-head">
-                    <h4>IES El Caminàs</h4>
-                    <span data-i18n="education.specialization">Curso de Especialización en Desarrollo de Videojuegos | 2025 - Actualidad</span>
-                </div>
-            </article>
-
-            <article class="entry">
-                <div class="entry-head">
-                    <h4>IES Vall d'Alba</h4>
-                    <span data-i18n="education.bachillerato">Bachillerato Científico-Técnico | 2021 - 2023</span>
-                </div>
-            </article>
-        </section>
-    </section>
+    </div>
 
     <aside class="sidebar">
         <img src="img.png" alt="Foto de perfil de Marc Ibáñez" class="profile-picture">
 
         <section class="panel">
-            <h3 data-i18n="sections.skills">Competencias Técnicas</h3>
+            <h2 class="panel-title" data-i18n="sections.skills">Competencias Técnicas</h2>
 
             <div class="skill-group">
-                <h4 data-i18n="skills.frontend.title">Frontend</h4>
+                <h3 data-i18n="skills.frontend.title">Frontend</h3>
                 <p data-i18n="skills.frontend.items">HTML5, CSS3, JavaScript, jQuery, diseño responsive</p>
             </div>
 
             <div class="skill-group">
-                <h4 data-i18n="skills.backend.title">Backend y Bases de Datos</h4>
+                <h3 data-i18n="skills.backend.title">Backend y Bases de Datos</h3>
                 <p data-i18n="skills.backend.items">Java, PHP, SQL, MySQL</p>
             </div>
 
             <div class="skill-group">
-                <h4 data-i18n="skills.tools.title">Herramientas</h4>
+                <h3 data-i18n="skills.tools.title">Herramientas</h3>
                 <p data-i18n="skills.tools.items">Git, GitHub, Bootstrap</p>
             </div>
 
             <div class="skill-group">
-                <h4 data-i18n="skills.other.title">Otros conocimientos</h4>
+                <h3 data-i18n="skills.other.title">Otros conocimientos</h3>
                 <p data-i18n="skills.other.items">C#, XML/RSS, maquetación web y documentación técnica</p>
             </div>
         </section>
 
         <section class="panel">
-            <h3 data-i18n="sections.languages">Idiomas</h3>
-            <ul class="info-list compact">
+            <h2 class="panel-title" data-i18n="sections.education">Formación</h2>
+
+            <div class="study">
+                <h3 data-i18n="education.daw">CFGS Desarrollo de Aplicaciones Web (DAW) | 2023 – 2025</h3>
+                <p>IES El Caminàs</p>
+            </div>
+
+            <div class="study">
+                <h3 data-i18n="education.specialization">Curso de Especialización en Desarrollo de Videojuegos | 2025 – Actualidad</h3>
+                <p>IES El Caminàs</p>
+            </div>
+
+            <div class="study">
+                <h3 data-i18n="education.bachillerato">Bachillerato Científico-Técnico | 2021 – 2023</h3>
+                <p>IES Vall d'Alba</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2 class="panel-title" data-i18n="sections.languages">Idiomas</h2>
+            <ul class="info-list">
                 <li data-i18n="languages.spanish">Español: nativo</li>
                 <li data-i18n="languages.english">Inglés: C1 Cambridge</li>
             </ul>
         </section>
 
         <section class="panel">
-            <h3 data-i18n="sections.additional">Información Adicional</h3>
-            <ul class="info-list compact">
+            <h2 class="panel-title" data-i18n="sections.additional">Información Adicional</h2>
+            <ul class="info-list">
                 <li data-i18n="additional.license">Permiso de conducir y vehículo propio</li>
                 <li data-i18n="additional.interest">Interés en posiciones junior de frontend, backend o desarrollo de software general</li>
                 <li data-i18n="additional.profile">Perfil adaptable, orientado al aprendizaje continuo y al trabajo en equipo</li>
@@ -177,26 +165,26 @@
         </section>
 
         <section class="panel">
-            <h3 data-i18n="sections.contact">Contacto</h3>
-            <ul class="info-list">
+            <h2 class="panel-title" data-i18n="sections.contact">Contacto</h2>
+            <ul class="info-list contact-list">
                 <li class="contact-item">
-                    <img src="img_5.png" alt="" class="contact-icon">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     <a href="mailto:mibanezp0709@gmail.com">mibanezp0709@gmail.com</a>
                 </li>
                 <li class="contact-item">
-                    <img src="img_2.png" alt="" class="contact-icon">
-                    <a href="tel:+34642677565">642 677 565</a>
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+34642677565">+34 642 677 565</a>
                 </li>
                 <li class="contact-item">
-                    <img src="img_3.png" alt="" class="contact-icon">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
                     <span>Vall d'Alba, Castellón</span>
                 </li>
                 <li class="contact-item">
-                    <img src="img_1.png" alt="" class="contact-icon">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
                     <a href="https://github.com/Marpuchy" target="_blank" rel="noreferrer">github.com/Marpuchy</a>
                 </li>
                 <li class="contact-item">
-                    <img src="img_4.png" alt="" class="contact-icon">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                     <a href="https://www.linkedin.com/in/marc-ib%C3%A0%C3%B1ez-0932502aa/" target="_blank" rel="noreferrer">linkedin.com/in/marc-ibáñez</a>
                 </li>
             </ul>

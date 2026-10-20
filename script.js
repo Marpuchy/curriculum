@@ -18,7 +18,7 @@ const translations = {
         },
         experience: {
             ntt: {
-                period: "Prácticas FCT | Marzo 2025 - Mayo 2025",
+                period: "Prácticas FCT | Marzo 2025 – Mayo 2025",
                 description: "Primera experiencia en un entorno profesional corporativo, con adaptación a dinámicas reales de trabajo en consultoría tecnológica. Durante este periodo tuve contacto con Kotlin Multiplatform y Jetpack Compose desde una base de aprendizaje, ampliando mi visión sobre nuevas herramientas y entornos de desarrollo."
             }
         },
@@ -40,9 +40,9 @@ const translations = {
             }
         },
         education: {
-            daw: "CFGS Desarrollo de Aplicaciones Web (DAW) | 2023 - 2025",
-            specialization: "Curso de Especialización en Desarrollo de Videojuegos | 2025 - Actualidad",
-            bachillerato: "Bachillerato Científico-Técnico | 2021 - 2023"
+            daw: "CFGS Desarrollo de Aplicaciones Web (DAW) | 2023 – 2025",
+            specialization: "Curso de Especialización en Desarrollo de Videojuegos | 2025 – Actualidad",
+            bachillerato: "Bachillerato Científico-Técnico | 2021 – 2023"
         },
         skills: {
             frontend: {
@@ -94,7 +94,7 @@ const translations = {
         },
         experience: {
             ntt: {
-                period: "FCT Internship | March 2025 - May 2025",
+                period: "FCT Internship | March 2025 – May 2025",
                 description: "First experience in a professional corporate environment, adapting to real work dynamics in technology consulting. During this period, I had exposure to Kotlin Multiplatform and Jetpack Compose from a learning perspective, broadening my view of new tools and development environments."
             }
         },
@@ -116,9 +116,9 @@ const translations = {
             }
         },
         education: {
-            daw: "Higher Vocational Diploma in Web Application Development (DAW) | 2023 - 2025",
-            specialization: "Specialization Course in Video Game Development | 2025 - Present",
-            bachillerato: "Scientific-Technological Baccalaureate | 2021 - 2023"
+            daw: "Higher Vocational Diploma in Web Application Development (DAW) | 2023 – 2025",
+            specialization: "Specialization Course in Video Game Development | 2025 – Present",
+            bachillerato: "Scientific-Technological Baccalaureate | 2021 – 2023"
         },
         skills: {
             frontend: {
@@ -163,7 +163,7 @@ function getTranslationValue(language, key) {
 }
 
 function applyLanguage(language) {
-    const selectedLanguage = translations[language] ? language : "en";
+    const selectedLanguage = translations[language] ? language : "es";
     const metaDescription = document.querySelector('meta[name="description"]');
 
     document.documentElement.lang = selectedLanguage;
@@ -189,7 +189,8 @@ function applyLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
+    // Español por defecto (es el idioma del PDF); ?lang=en fuerza el inglés.
+    const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
 
     document.querySelectorAll(".language-button").forEach((button) => {
         button.addEventListener("click", () => {
@@ -197,5 +198,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    applyLanguage(browserLanguage);
+    applyLanguage(requestedLanguage || "es");
 });
