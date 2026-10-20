@@ -46,8 +46,7 @@ No hay lint ni tests: la verificación es `node build.js` + PDF de ambas version
   Los campos `todo` son preguntas pendientes: no se publican.
 - `build.js` – plantilla y generador. Escribe `index.html` y `videojuegos/index.html`: **no editarlos a mano**.
 - `styles.css` – tokens en `:root`, estilos de pantalla, responsive y `@media print`.
-- `script.js` – i18n antiguo, ya sin uso (pendiente de decidir si se borra).
-- `img.png` – foto de perfil. `img_1..5.png` – iconos antiguos, ya sin uso (sustituidos por SVG de lucide en línea).
+- `img.png` – foto de perfil. Los iconos son SVG de lucide en línea, generados por `build.js`.
 - `fonts/` – woff2 de IBM Plex y su licencia OFL.
 - `.claude/` – hook de comprobación, skill `curriculum-design-system` y agente `ui-reviewer`.
 
